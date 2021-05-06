@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.showList {
+	text-decoration: none;
+	box-sizing: border-box;
+	min-width : 50px;
+	min-height : 50px;
+	border : 1px solid #999999;
+	background: #999999;
+	color : #ffffff;
+	padding : 10px 20px;
+	margin :5px 20px;
+	position: absolute;
+	left : 130px;
+}
+
+.showList:hover{
+	background : #dddddd;
+}

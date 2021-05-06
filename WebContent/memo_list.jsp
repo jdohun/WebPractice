@@ -6,25 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style type="text/css">
-	.Write {
-		text-decoration: none;
-		box-sizing: border-box;
-		min-width : 50px;
-		min-height : 50px;
-		boder : 1px solid #000000;
-		background: #000000;
-		color : #ffffff;
-		padding : 10px 20px;
-		margin : 0 20px;
-		position: absolute;
-		left : 300px;
-	}
-	
-	.Write:hover{
-		background : #444444;
-	}
-</style>
+<link rel="stylesheet" href="css/write.css">
+<link rel="stylesheet" href="css/memoList.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -47,14 +30,20 @@
 		int no = result.getInt("no");
 		String memo = result.getString("memo");
 		String wdate = result.getString("wdate");
-		
-		out.print("<p>" + "일련번호" + no + " : "  + memo + " : (" + wdate + ")" + "</p>");
+%>
+	<div class="memo"><p>일련번호 <%=no%> : <%=memo%> : <%=wdate%></p>
+	<form action="memo_delete.jsp" method="post">
+		<input type="hidden" value="<%=no%>" name="deleteNo">
+		<input type="submit" class="delete" value="X" class="deleteMemo">
+	</form>
+	</div>
+<%
 	}
 	result.close();
 	pstmt.close();
 	con.close();
-	out.print("DB조회 성공");
 %>
-<a href="memo01.html" class="Write">작성</a>
+	<span style="margin:16px;"><b>DB조회 성공</b></span>
+	<a href="memo01.html" class="Write">작성</a>
 </body>
 </html>

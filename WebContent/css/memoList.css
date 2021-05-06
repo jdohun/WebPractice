@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.memo p{
+	display: inline;
+	margin: 3px 16px;
+}
+
+form {
+	display: inline-block;
+	padding : 6px 1px;
+}
+
+.deleteMemo {
+	padding : 6px 1px;
+}
