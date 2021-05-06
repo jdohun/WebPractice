@@ -6,6 +6,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style type="text/css">
+	.Write {
+		text-decoration: none;
+		box-sizing: border-box;
+		min-width : 50px;
+		min-height : 50px;
+		boder : 1px solid #000000;
+		background: #000000;
+		color : #ffffff;
+		padding : 10px 20px;
+		margin : 0 20px;
+		position: absolute;
+		left : 300px;
+	}
+	
+	.Write:hover{
+		background : #444444;
+	}
+</style>
 <title>Insert title here</title>
 </head>
 <body>
@@ -29,12 +48,13 @@
 		String memo = result.getString("memo");
 		String wdate = result.getString("wdate");
 		
-		out.print("일련번호" + no + " : "  + memo + " : (" + wdate + ")<br>");
+		out.print("<p>" + "일련번호" + no + " : "  + memo + " : (" + wdate + ")" + "</p>");
 	}
 	result.close();
 	pstmt.close();
 	con.close();
-	out.println("DB조회 성공");
+	out.print("DB조회 성공");
 %>
+<a href="memo01.html" class="Write">작성</a>
 </body>
 </html>

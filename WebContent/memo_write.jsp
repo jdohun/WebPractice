@@ -30,7 +30,8 @@
 	
 	pstmt.close();
 	con.close();
-	out.println("DB 추가 성공");
+	//out.println("DB 추가 성공");
 %>
+<meta http-equiv="refresh" content="0; url=memo_list.jsp">
 </body>
 </html>
