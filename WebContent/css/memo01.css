@@ -1,0 +1,76 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+main {
+	position: relative;
+	min-width: 1000px;
+	width: 100%;
+	min-height: 850px;
+	height: 100%;
+	padding: 10px;
+}
+
+main h3 {
+	background: #46FFFF;
+	color : #ffffff;
+	text-align: center;
+	padding: 5px;
+	height: 40px;
+	text-shadow: 2.5px 2.5px #000000, -1px 0px #000000, 0px -1px #000000;
+}
+
+.contents {
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	border: 3px solid;
+	border-radius: 15%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	box-shadow: 15px 15px #46FFFF;
+}
+
+.form {
+	width: inherit;
+	text-align: center;
+	margin: 5px 5px 15px 5px;
+}
+
+.contents p {
+	padding: 5px 5px 5px 25px;
+}
+
+#memo {
+	padding: 2px 2px 2px 7px;
+	width: 290px;
+	height: 30px;
+}
+
+#submit {
+	padding: 2px;
+	width: 50px;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	background: #32A4FF;
+	color: #ffffff;
+}
+
+
+.delete {
+	width: 30px;
+	height: 20px;
+	background-color: #32A4FF;
+	vertical-align: middle;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	color: #ffffff;
+}
+
+#submit:hover, .delete:hover {
+	background: #000000;
+}
