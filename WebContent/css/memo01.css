@@ -4,67 +4,98 @@
 	box-sizing: border-box;
 }
 
-main {
-	position: relative;
-	min-width: 1000px;
+body {
 	width: 100%;
-	min-height: 850px;
 	height: 100%;
-	padding: 10px;
+	background-color: #00EBFF;
+	text-align: center;
 }
 
-main h3 {
-	background: #46FFFF;
-	color : #ffffff;
+#contents {
+	width: 700px;
+	margin: 20px auto;
+	text-align: center;
+	border: 3px solid #000000;
+	background:#46FFFF;
+}
+
+hr {
+	border: 0;
+    height: 4px;
+    background-color:#000000; 
+}
+
+ #title {
 	text-align: center;
 	padding: 5px;
 	height: 40px;
-	text-shadow: 2.5px 2.5px #000000, -1px 0px #000000, 0px -1px #000000;
+	margin: 10px;
 }
 
-.contents {
-	position: absolute;
-	width: 500px;
-	height: 500px;
-	border: 3px solid;
-	border-radius: 15%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-	box-shadow: 15px 15px #46FFFF;
-}
-
-.form {
-	width: inherit;
+.memoInputForm {
 	text-align: center;
-	margin: 5px 5px 15px 5px;
+	margin: 10px auto;
 }
 
-.contents p {
-	padding: 5px 5px 5px 25px;
-}
-
-#memo {
+#memoInput {
 	padding: 2px 2px 2px 7px;
 	width: 290px;
 	height: 30px;
 }
 
-#submit {
+#memoSubmit {
 	padding: 2px;
-	width: 50px;
+	width: 100px;
 	border: 1px solid #000000;
 	border-radius: 10px;
 	background: #32A4FF;
 	color: #ffffff;
+	margin-top: 10px;
 }
 
+#memoList {
+	width : 95%;
+	margin: 10px auto;
+}
+
+#memoList, #memoList th, #memoList td{
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	height:44px;
+}
+
+
+.memoNumber {
+	width : 150px;	
+}
+
+.memoContents {
+	padding: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.memoContents span{
+	display: inline-block;
+}
+
+.wdate {
+	width: 200px;
+}
+
+.memoDeleteForm {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.deleteMemo {
+	padding : 6px 1px;
+}
 
 .delete {
 	width: 30px;
 	height: 20px;
-	background-color: #32A4FF;
+	background-color: #FF3232;
 	vertical-align: middle;
 	border: 1px solid #000000;
 	border-radius: 10px;

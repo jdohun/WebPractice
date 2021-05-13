@@ -31,7 +31,9 @@
 		String memo = result.getString("memo");
 		String wdate = result.getString("wdate");
 %>
-	<div class="memo"><p>일련번호 <%=no%> : <%=memo%> : <%=wdate%></p>
+	<div class="memo">
+	<p>일련번호 <%=no%> : <%=memo%> : <%=wdate%></p>
+	<%-- <input class="deleteMemo" type="button" value="X" onClick="location.href='memo_delete.jsp?no="+<%=no%>> --%>
 	<form action="memo_delete.jsp" method="post">
 		<input type="hidden" value="<%=no%>" name="deleteNo">
 		<input type="submit" class="delete" value="X" class="deleteMemo">
