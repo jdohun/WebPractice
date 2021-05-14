@@ -12,13 +12,14 @@
 <body>
 <%
 	request.setCharacterEncoding("utf-8");
-	int deleteNo = Integer.parseInt(request.getParameter("deleteNo"));
+	String deleteNo = request.getParameter("deleteNo");
+	//int deleteNo = Integer.parseInt(request.getParameter("deleteNo"));
 %>
 <%
 	String url = "jdbc:mysql://localhost/testsql?characterEncoding=UTF-8&serverTimezone=UTC";
 	String user = "root";
 	String passwd = "1234";
-	String sql = "delete from oneline where no=?";
+	String sql = "delete from oneline where no=" + deleteNo; // 여기서 no값을 바로 합치면
 	PreparedStatement pstmt = null;
 	
 	Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,14 +27,12 @@
 	Connection con = DriverManager.getConnection(url, user, passwd);
 	
 	pstmt = con.prepareStatement(sql);
-	pstmt.setInt(1, deleteNo);
+	//pstmt.setInt(1, deleteNo);		// 여기서 안해도 됨
 	pstmt.executeUpdate();
 	
 	pstmt.close();
 	con.close();
-	out.print("DB삭제 성공");
+	response.sendRedirect("memo01.jsp");
 %>
-<a href="memo_list.jsp" class="showList">리스트 보기</a>
-<a href="memo01.html" class="Write">작성</a>
 </body>
 </html>
